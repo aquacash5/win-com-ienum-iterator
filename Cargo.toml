@@ -1,15 +1,24 @@
 [package]
 name = "win-com-ienum-iterator"
 version = "0.43.0"
-authors = ["Kyle Bloom <kylejbloom@gmail.com>"]
-description = "Iterator struct for Windows COM IEnumVARIANT"
-repository = "https://github.com/aquacash5/win-com-ienum-iterator"
-readme = "README.md"
+
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/aquacash5/win-com-ienum-iterator"
+authors = ["Kyle Bloom <kylejbloom@gmail.com>"]
+readme = "README.md"
+
+description = "Iterator struct for Windows COM IEnumVARIANT"
+
 keywords = ["windows", "iterator"]
 categories = ["os", "os::windows-apis", "rust-patterns"]
+
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+windows = { version = "0.43.0", features = [
+    "Win32_System_Com",
+    "Win32_Foundation",
+    "Win32_System_Ole",
+] }
